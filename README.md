@@ -5,6 +5,9 @@ This is a simple ES6 no strings attached, self contained, you get what you pay f
 
 It simply allows you to display a small unobtrusive on screen prompt for a few moments.
 
+![Demo](https://github.com/owenmelbz/jquery-nudge/raw/master/demo.gif)
+
+
 Super helpful for things like
 
 - Back up saved
