@@ -23,16 +23,15 @@ or via yarn using `yarn add jquery-nudge`
 
 You will need to transpile this down for older browsers most likely, but once you've got that flow working simply use however you like e.g
 
-```
+```js
 window.nudge = require('jquery-nudge');
 
 nudge('this is globally accessible');
-
 ```
 
 or even
 
-```
+```js
 import nudge from 'jquery-nudge'
 
 nudge('this is local to the file');
@@ -42,7 +41,7 @@ nudge('this is local to the file');
 
 You can pass in either a single string param for a simple message, or you can pass in a configuration object, the default looks like
 
-```
+```js
 {
     message: 'This is a nudge', // the default message
     wait: 3000, // how long to sit on the screen idle
@@ -65,7 +64,7 @@ The CSS for the component is scoped within the element itself, however you shoul
 
 Or you can pass in
 
-```
+```js
 {
     noCss: true
 }
