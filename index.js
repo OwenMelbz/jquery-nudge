@@ -15,7 +15,7 @@ module.exports = function (message) {
 
     if (typeof message == 'object') {
         jQuery.extend(config, message);
-    } else {
+    } else if (message) {
         config.message = message;
     }
 
