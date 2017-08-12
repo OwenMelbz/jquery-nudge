@@ -1,0 +1,25 @@
+{
+  "name": "jquery-nudge",
+  "version": "0.0.1",
+  "description": "Simple ES6 jQuery library to produce small on-screen nudges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OwenMelbz/jquery-nudge.git"
+  },
+  "keywords": [
+    "jquery",
+    "es6",
+    "nudge",
+    "notification"
+  ],
+  "author": "Owen Melbourne <owenmelbz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OwenMelbz/jquery-nudge/issues"
+  },
+  "homepage": "https://github.com/OwenMelbz/jquery-nudge#readme"
+}
