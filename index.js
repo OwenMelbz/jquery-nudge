@@ -41,41 +41,35 @@ module.exports = function (message) {
 
     let css = `
         <style scoped>
-
             .jquery-nudge {
-                pointer-events: none;
                 position: fixed;
                 top: 50px;
                 left: 50%;
-                padding: 10px 20px;
-                background: rgba(0, 0, 0, .7);
-                border-radius: 25px;
-                text-align: center;
+                z-index: 9999999;
                 min-width: 120px;
+                padding: 10px 20px;
+                border-radius: 25px;
+                background: rgba(0, 0, 0, .7);
+                text-align: center;
                 -webkit-box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);
                 -moz-box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);
                 box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);
-            }
+                pointer-events: none; }
 
             .jquery-nudge span {
-                font-size: 14px;
                 color: #fff;
-            }
+                font-size: 14px; }
 
             .jquery-nudge.start {
-                transform: translate(-50%, 100vh);
-            }
+                transform: translate(-50%, 100vh); }
 
             .jquery-nudge.show {
                 transition: all .4s ease-out;
-                transform: translate(-50%, 70vh);
-            }
+                transform: translate(-50%, 70vh); }
 
             .jquery-nudge.finish {
                 transition: all .5s ease;
-                transform: translate(-50%, -200px);
-            }
-
+                transform: translate(-50%, -200px); }
         </style>
     `;
 
