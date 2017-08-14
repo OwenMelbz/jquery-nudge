@@ -29,7 +29,7 @@ You will need to transpile this down for older browsers most likely, but once yo
 ```js
 window.nudge = require('jquery-nudge');
 
-nudge('this is globally accessible');
+new nudge('this is globally accessible');
 ```
 
 or even
@@ -37,7 +37,7 @@ or even
 ```js
 import nudge from 'jquery-nudge'
 
-nudge('this is local to the file');
+new nudge('this is local to the file');
 ```
 
 # Configuring

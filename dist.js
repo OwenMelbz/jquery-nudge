@@ -2,16 +2,12 @@
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-module.exports = function (message) {
+var nudge = function nudge(message) {
     var _this = this;
-
-    if (typeof jQuery == 'undefined') {
-        throw 'jQuery 3+ is required.';
-    }
 
     var config = {
         message: 'This is a nudge',
-        wait: 3000,
+        wait: 3000, // how long to sit on the screen
         delay: 100, // how long to wait before initiating
         kill: 4500, // how long before removing the element
         noCss: false,
@@ -77,3 +73,5 @@ module.exports = function (message) {
         _this.nudging = false;
     }, config.kill);
 };
+
+module.exports = nudge;
