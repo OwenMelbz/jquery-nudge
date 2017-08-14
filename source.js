@@ -22,17 +22,15 @@ const nudge = function (message) {
 
     debugLog(config);
 
-    if (this.nudging) {
+    if (jQuery('.jquery-nudge').length) {
         debugLog(jQuery('.jquery-nudge').length + ' already showing');
 
-        clearTimeout(this.killSwitch);
+        clearTimeout(window.nudgekillSwitch);
 
         jQuery('.jquery-nudge').fadeOut(() => {
             jQuery(this).remove();
         });
     }
-
-    this.nudging = true;
 
     let css = `
         <style scoped>
@@ -103,11 +101,10 @@ const nudge = function (message) {
             .addClass('finish')
     }, config.wait);
 
-    this.killSwitch = setTimeout(() => {
+    window.nudgekillSwitch = setTimeout(() => {
         debugLog('nudge removed');
         jQuery('.jquery-nudge').remove();
         element = undefined;
-        this.nudging = false;
     }, config.kill);
 };
 

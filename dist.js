@@ -28,7 +28,7 @@ var nudge = function nudge(message) {
 
     debugLog(config);
 
-    if (this.nudging) {
+    if (jQuery('.jquery-nudge').length) {
         debugLog(jQuery('.jquery-nudge').length + ' already showing');
 
         clearTimeout(this.killSwitch);
@@ -37,8 +37,6 @@ var nudge = function nudge(message) {
             jQuery(_this).remove();
         });
     }
-
-    this.nudging = true;
 
     var css = '\n        <style scoped>\n            .jquery-nudge {\n                position: fixed;\n                top: 50px;\n                left: 50%;\n                z-index: 9999999;\n                min-width: 120px;\n                padding: 10px 20px;\n                border-radius: 25px;\n                background: rgba(0, 0, 0, .7);\n                text-align: center;\n                -webkit-box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);\n                -moz-box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);\n                box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, .2);\n                pointer-events: none; }\n\n            .jquery-nudge span {\n                color: #fff;\n                font-size: 14px; }\n\n            .jquery-nudge.start {\n                transform: translate(-50%, 100vh); }\n\n            .jquery-nudge.show {\n                transition: all .4s ease-out;\n                transform: translate(-50%, 70vh); }\n\n            .jquery-nudge.finish {\n                transition: all .5s ease;\n                transform: translate(-50%, -200px); }\n        </style>\n    ';
 
