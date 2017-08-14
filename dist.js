@@ -31,7 +31,7 @@ var nudge = function nudge(message) {
     if (jQuery('.jquery-nudge').length) {
         debugLog(jQuery('.jquery-nudge').length + ' already showing');
 
-        clearTimeout(this.killSwitch);
+        clearTimeout(window.nudgekillSwitch);
 
         jQuery('.jquery-nudge').fadeOut(function () {
             jQuery(_this).remove();
@@ -64,11 +64,10 @@ var nudge = function nudge(message) {
         element.removeClass('show').addClass('finish');
     }, config.wait);
 
-    this.killSwitch = setTimeout(function () {
+    window.nudgekillSwitch = setTimeout(function () {
         debugLog('nudge removed');
         jQuery('.jquery-nudge').remove();
         element = undefined;
-        _this.nudging = false;
     }, config.kill);
 };
 
