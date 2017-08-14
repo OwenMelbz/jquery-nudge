@@ -1,9 +1,4 @@
-module.exports = function (message) {
-
-    if (typeof jQuery == 'undefined') {
-        throw 'jQuery 3+ is required.';
-    }
-
+const nudge = function (message) {
     let config = {
         message: 'This is a nudge',
         wait: 3000, // how long to sit on the screen
@@ -114,5 +109,6 @@ module.exports = function (message) {
         element = undefined;
         this.nudging = false;
     }, config.kill);
-
 };
+
+module.exports = nudge;
