@@ -1,7 +1,7 @@
 # jquery-nudge
 > Simple ES6 jQuery library to produce small on-screen nudges
 
-*Package deprecated - Recommend upgrading to https://github.com/OwenMelbz/mlbz-nudge - ~5 minutes upgrade time*
+**Package deprecated - Recommend upgrading to https://github.com/OwenMelbz/mlbz-nudge - ~5 minutes upgrade time**
 
 This is a simple ES6 no strings attached, self contained, you get what you pay for micro library.
 
